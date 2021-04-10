@@ -10,7 +10,7 @@ class SignUpPage:
 
     def next(self):
         if self.confirmPassVar.get() != self.passVar.get():
-            messagebox.showerror("!", "Password didn't match!")
+            messagebox.showerror("!", "Password didn't match!") 
         else:
             query = 'insert into User (UserName,Password) values(%s,%s);'
             values = (self.userVar.get(), self.passVar.get())
